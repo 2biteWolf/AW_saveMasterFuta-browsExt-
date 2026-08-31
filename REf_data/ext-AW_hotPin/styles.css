@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  width: 320px;
+  min-height: 220px;
+  background: #2d2d2d;
+  color: #fff;
+}
+
+.container {
+  padding: 20px;
+  border: 2px solid #6a0dad;
+  border-radius: 8px;
+  background: #1e1e1e;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #444;
+}
+
+h1 {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.version {
+  color: #9370db;
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.description {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.hotkey-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.current-hotkey {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #333;
+  border-radius: 6px;
+  border: 1px solid #444;
+  font-size: 15px;
+}
+
+.hotkey-text {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 4px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid #7b1fa2;
+}
+
+.hotkey-text.active {
+  background: #4CAF50;
+  border-color: #45a049;
+}
+
+.hotkey-text.inactive {
+  background: #f44336;
+  border-color: #d32f2f;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.config-btn {
+  width: 100%;
+  padding: 14px;
+  background: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 10px;
+}
+
+.config-btn:hover {
+  background: #7b1fa2;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(106, 13, 173, 0.3);
+}
+
+.config-btn:active {
+  transform: translateY(0);
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+}
+
+.hint {
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 11px;
+  min-height: 16px;
+  transition: color 0.3s;
+}

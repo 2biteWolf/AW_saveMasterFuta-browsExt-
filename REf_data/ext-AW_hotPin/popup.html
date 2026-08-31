@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AW_hotPin <span class="version">v0.2</span></h1>
+    </header>
+    
+    <main>
+      <p class="description">Set pin/unpin hotkey</p>
+      
+      <div class="hotkey-section">
+        <div class="current-hotkey">
+          Current hotkey: <span id="currentHotkey" class="hotkey-text">Alt+Z</span>
+        </div>
+        
+        <button class="config-btn" id="configBtn">
+          Change Hotkey in Browser Settings
+        </button>
+      </div>
+    </main>
+    
+    <footer>
+      <p class="hint">Opens browser shortcuts page for reassignment</p>
+      <p class="status" id="statusMsg"></p>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

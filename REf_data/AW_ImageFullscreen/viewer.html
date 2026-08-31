@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AW_ImageFullscreen</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; background: #000; }
+    #img { display: block; }
+    #toast {
+      position: fixed;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.88);
+      color: #39ff14;
+      font: 13px/1.4 system-ui, sans-serif;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1px solid #39ff14;
+      z-index: 99999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+      max-width: 92vw;
+      text-align: center;
+      white-space: nowrap;
+    }
+    #toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+  <div id="toast"></div>
+  <img id="img" alt="">
+  <script src="viewer.js"></script>
+</body>
+</html>

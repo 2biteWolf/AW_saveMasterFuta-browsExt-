@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "AW_ImageFullscreen",
+  "version": "1.1.2",
+  "description": "Fullscreen image modes for data: and direct image tabs. Save with hotkeys. Custom rename.",
+  "author": "AW",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "storage",
+    "webNavigation",
+    "downloads"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "file://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_title": "AW_ImageFullscreen",
+    "default_popup": "popup.html",
+    "default_icon": { "128": "icon128.png" }
+  },
+  "commands": {
+    "save-original": {
+      "suggested_key": {
+        "default": "Alt+Shift+B",
+        "mac": "Alt+Shift+B"
+      },
+      "description": "Save image in original format"
+    },
+    "save-png": {
+      "suggested_key": {
+        "default": "Alt+Shift+N",
+        "mac": "Alt+Shift+N"
+      },
+      "description": "Save image as PNG"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["viewer.html", "viewer.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "128": "icon128.png"
+  }
+}
